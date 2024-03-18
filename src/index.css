@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Carattere&family=Roboto:ital@0;1&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-dark: 221 39% 11%;
+    --color-bg-dark-mute: 217 19% 27%;
+    --color-content: 220 13% 91%;
+    --color-content-highlight: 173 80% 40%;
+    --color-button: 175 77% 26%;
+    --color-button-hover: 175 77% 26%;
+    --color-skill-bg: 215 25% 27%;
+    --color-skill-bg-hover: 217 33% 17%;
+    --color-skill-shadow: 215 19%, 35%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg-dark: 221 39% 11%;
+      --color-bg-dark-mute: 217 19% 27%;
+      --color-content: 220 13% 91%;
+      --color-content-highlight: 173 80% 40%;
+      --color-button: 175 77% 26%;
+      --color-button-hover: 175 77% 26%;
+      --color-skill-bg: 215 25% 27%;
+      --color-skill-bg-hover: 217 33% 17%;
+      --color-skill-shadow: 215 19%, 35%;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-bg-dark: 216 12% 84%;
+      --color-bg-dark-mute: 0 0% 100%;
+      --color-content: 0 0% 10%;
+      --color-content-highlight: 175 77% 26%;
+      --color-button: 0 0% 100%;
+      --color-button-hover: 216 12% 84%;
+      --color-skill-bg: 0 0% 100%;
+      --color-skill-bg-hover: 216 8% 88%;
+      --color-skill-shadow: 215 19%, 35%;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --color-bg-dark: 221 39% 11%;
+    --color-bg-dark-mute: 217 19% 27%;
+    --color-content: 220 13% 91%;
+    --color-content-highlight: 173 80% 40%;
+    --color-button: 175 77% 26%;
+    --color-button-hover: 175 77% 26%;
+    --color-skill-bg: 215 25% 27%;
+    --color-skill-bg-hover: 217 33% 17%;
+    --color-skill-shadow: 215 19%, 35%;
+  }
+  :root[data-theme="light"] {
+    --color-bg-dark: 216 12% 84%;
+    --color-bg-dark-mute: 0 0% 100%;
+    --color-content: 0 0% 10%;
+    --color-content-highlight: 175 77% 26%;
+    --color-button: 0 0% 100%;
+    --color-button-hover: 216 12% 84%;
+    --color-skill-bg: 0 0% 100%;
+    --color-skill-bg-hover: 216 8% 88%;
+    --color-skill-shadow: 215 19%, 35%;
+  }
+}
+
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Custon scrollbar */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--color-bg-dark));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--color-skill-bg));
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--color-content-highlight));
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+  background-clip: content-box;
+}
+
