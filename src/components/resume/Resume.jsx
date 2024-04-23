@@ -8,7 +8,7 @@ function Resume() {
   const handleDownload = () => {
     // Replace the file URL with your PDF file's URL
     const fileUrl =
-      "https://drive.google.com/file/d/1PD-e9_ukiUnDTfbDJs1UvgmjxyLLDYQj/view?usp=sharing";
+      "https://drive.google.com/file/d/1-KiwA72zIulNbZCgo6oZJvGqmiQkxBOU/view?usp=sharing";
     const anchor = document.createElement("a");
     anchor.href = fileUrl;
     anchor.target = "_blank";
@@ -40,7 +40,7 @@ function Resume() {
         }`}
       >
         <iframe
-          src="https://drive.google.com/file/d/1PD-e9_ukiUnDTfbDJs1UvgmjxyLLDYQj/preview"
+          src="https://drive.google.com/file/d/1-KiwA72zIulNbZCgo6oZJvGqmiQkxBOU/preview"
           allow="autoplay"
           onLoad={() => setLoading(false)}
           title="Resume PDF"
